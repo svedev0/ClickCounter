@@ -2,6 +2,7 @@ package main;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
@@ -26,7 +27,7 @@ public class Main extends Application {
 		Label clicksCounter = new Label();
 		
 		// Create incrementing button
-		
+		Button clickIncrementingButton = new Button("Click Here!");
 		
 		// Change text to clicks
 		clicksCounter.setText("" + Counter.getClicks());
@@ -41,6 +42,7 @@ public class Main extends Application {
 		// Add all children
 		root.getChildren().add(clicksLabel);
 		root.getChildren().add(clicksCounter);
+		root.getChildren().add(clickIncrementingButton);
 		
 		// Main scene
 		Scene mainScene = new Scene(root, windowWidth, windowHeight);
