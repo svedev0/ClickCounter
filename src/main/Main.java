@@ -42,7 +42,7 @@ public class Main extends Application {
 		root.getChildren().add(clickIncrement);
 		
 		// Styling
-		StackPane.setAlignment(clickIncrement, Pos.BOTTOM_CENTER);
+		StackPane.setAlignment(clickIncrement, Pos.CENTER);
 		clickIncrement.setStyle("-fx-background-radius: 20em; "
 							  + "-fx-min-width: 120px;"
                				  + "-fx-min-height: 120px;"
