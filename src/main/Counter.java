@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 //import javax.swing.Timer;
 
 @SuppressWarnings("all")
-public class Main extends JFrame {
+public class Counter extends JFrame {
 
 	private JButton start;
 	private JButton exit;
@@ -27,7 +27,7 @@ public class Main extends JFrame {
   //private Timer timer;
 	private int clickCount;
 	
-	public Main() {
+	public Counter() {
 		
 		super("Click Counter!");
 		setSize(400, 200);

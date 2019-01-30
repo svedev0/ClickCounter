@@ -8,7 +8,7 @@ public class Start {
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 	
-		Main main = new Main();
+		Counter clickCounter = new Counter();
 		
 	}
 }
