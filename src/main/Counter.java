@@ -13,31 +13,29 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-//import javax.swing.Timer;
 
-@SuppressWarnings("all")
+@SuppressWarnings("unused")
 public class Counter extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JButton start;
 	private JButton exit;
 	private JPanel panel;
 	private JLabel statusBar;
 	private JLabel timeLeft;
 	private String congrats;
-  //private Timer timer;
 	private int clickCount;
+	ImageIcon icon = new ImageIcon("/icons/icon.png");
 	
 	public Counter() {
 		
 		super("Click Counter!");
+		setIconImage(icon.getImage());
 		setSize(400, 200);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 		setLocationRelativeTo(null);
-		
-		ImageIcon img = new ImageIcon("/icons/icon.png");
-		setIconImage(img.getImage());
 		
 		start = new JButton("start");
 		start.setBounds(100, 30, 200, 50);
@@ -63,11 +61,7 @@ public class Counter extends JFrame {
 		statusBar = new JLabel();
 		add(statusBar, BorderLayout.SOUTH);
 		
-	  //timeLeft = new JLabel("Time left: 30");
-	  //add(timeLeft, BorderLayout.NORTH);
-		
 		TimeListenerClass tc = new TimeListenerClass();
-	  //timer = new Timer(1000, tc);
 	}
 	
 	private class StartListener implements ActionListener {
@@ -76,7 +70,6 @@ public class Counter extends JFrame {
 			start.setVisible(false);
 			exit.setVisible(false);
 			panel.setVisible(true);
-		  //timer.start();
 			clickCount = 0;
 		}
 	}
@@ -96,7 +89,6 @@ public class Counter extends JFrame {
 			x--;
 			
 			if (x >= 0) {
-				//timeLeft.setText(String.format("time left: %d", x));
 			} else {
 				if (clickCount >= 0 && clickCount < 100) {
 					congrats = String.format("You clicked %d times. You are slow!", clickCount);
@@ -111,7 +103,6 @@ public class Counter extends JFrame {
 					congrats = String.format("You clicked %d times. Stop cheating!", clickCount);
 					JOptionPane.showMessageDialog(null, congrats);
 				}
-				//timer.stop();
 				start.setVisible(true);
 				exit.setVisible(true);
 				panel.setVisible(false);
